@@ -1,0 +1,107 @@
+:root {
+  --plyr-color-main: #FDC000;
+  --plyr-video-background: #000;
+  --plyr-menu-background: rgba(28, 28, 28, 0.9);
+  --plyr-menu-color: #fff;
+  --plyr-tooltip-background: rgba(28, 28, 28, 0.9);
+  --plyr-tooltip-color: #fff;
+  --plyr-font-family: "Inter", sans-serif;
+  --plyr-font-size-small: 13px;
+  --plyr-font-size-base: 15px;
+  --plyr-font-size-large: 17px;
+  --plyr-font-weight-regular: 400;
+  --plyr-font-weight-bold: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.plyr--video {
+  border-radius: 8px;
+}
+
+.plyr--full-ui input[type="range"] {
+  color: var(--plyr-color-main);
+}
+
+.plyr__control--overlaid {
+  background: var(--plyr-color-main);
+}
+
+.plyr--video .plyr__control:hover {
+  background: var(--plyr-color-main);
+}
+
+.plyr__preview-thumb {
+  background-color: var(--plyr-tooltip-background);
+  border-radius: 4px;
+  border: none;
+  bottom: 30px;
+}
+
+.plyr__preview-thumb::before {
+  border-top-color: var(--plyr-tooltip-background);
+}
+
+.plyr__menu__container {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.plyr__menu__container .plyr__control {
+  border-radius: 4px;
+}
+
+.plyr__menu__container .plyr__control--forward {
+  padding-right: 28px;
+}
+
+.plyr__control--overlaid {
+  background: var(--plyr-color-main);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.9;
+}
+
+.plyr__control--overlaid:hover {
+  background: var(--plyr-color-main);
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.plyr--video .plyr__control--overlaid {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plyr--video .plyr__control--overlaid:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.plyr--video .plyr__progress__buffer {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.plyr__time {
+  font-family: var(--plyr-font-family);
+  font-size: var(--plyr-font-size-small);
+}
