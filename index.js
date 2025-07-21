@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let i = 1; i <= count; i++) {
       const seekNumber = i.toString().padStart(3, "0");
-
       if (jwt) {
         urls.push(
           `https://assets.zustack.com/private/${location}/${bucketID}/${fileID}/seek_${seekNumber}.jpg?jwt=${jwt}`
